@@ -18,10 +18,10 @@
 		72897CAE15BA818B0023B870 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		72897CAF15BA818B0023B870 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		72897CB015BA818B0023B870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		72897CB315BA818B0023B870 /* SNOperationQueue-Info.plist */ = {isa = PBXFileReference; path = "SNOperationQueue-Info.plist"; sourceTree = "<group>"; };
+		72897CB315BA818B0023B870 /* SNOperationQueue-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SNOperationQueue-Info.plist"; sourceTree = "<group>"; };
 		72897CB515BA818B0023B870 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		72897CB715BA818B0023B870 /* SNOperationQueue-Prefix.pch */ = {isa = PBXFileReference; path = "SNOperationQueue-Prefix.pch"; sourceTree = "<group>"; };
-		72897CB815BA818B0023B870 /* SNOperationQueue.h */ = {isa = PBXFileReference; path = SNOperationQueue.h; sourceTree = "<group>"; };
+		72897CB715BA818B0023B870 /* SNOperationQueue-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNOperationQueue-Prefix.pch"; sourceTree = "<group>"; };
+		72897CB815BA818B0023B870 /* SNOperationQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNOperationQueue.h; sourceTree = "<group>"; };
 		72897CB915BA818B0023B870 /* SNOperationQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNOperationQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +278,7 @@
 				72897CBF15BA818B0023B870 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
