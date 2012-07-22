@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		727E6D1415BBE00800C0BB36 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 727E6D1315BBE00800C0BB36 /* README.md */; };
 		72897CAC15BA818B0023B870 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72897CAB15BA818B0023B870 /* Cocoa.framework */; };
 		72897CB615BA818B0023B870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72897CB415BA818B0023B870 /* InfoPlist.strings */; };
 		72897CBA15BA818B0023B870 /* SNOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 72897CB915BA818B0023B870 /* SNOperationQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		727E6D1315BBE00800C0BB36 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		72897CA815BA818B0023B870 /* SNOperationQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNOperationQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72897CAB15BA818B0023B870 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		72897CAE15BA818B0023B870 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 		72897CB215BA818B0023B870 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				727E6D1315BBE00800C0BB36 /* README.md */,
 				72897CB315BA818B0023B870 /* SNOperationQueue-Info.plist */,
 				72897CB415BA818B0023B870 /* InfoPlist.strings */,
 				72897CB715BA818B0023B870 /* SNOperationQueue-Prefix.pch */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72897CB615BA818B0023B870 /* InfoPlist.strings in Resources */,
+				727E6D1415BBE00800C0BB36 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
