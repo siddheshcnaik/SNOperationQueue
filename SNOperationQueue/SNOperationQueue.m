@@ -8,6 +8,8 @@
 
 #import "SNOperationQueue.h"
 
+const char s[] = "SNOperationQueue";
+
 @interface SNOperationQueue()
 {
     NSOperationQueue* queue;
@@ -83,6 +85,8 @@
 
 -(void)addOperation:(NSOperation*)op
 {
+    [op addObserver:self forKeyPath:@"isFinished" options:(NSKeyValueObservingOptionNew |
+                                                       NSKeyValueObservingOptionOld) context:(void*)s];
     switch (self.queueType) {
         case SNOperationQueueLIFO:
             [self addLIFOOperation:op];
@@ -91,6 +95,9 @@
         case SNOperationQueueFIFO:
             [self addFIFOOperation:op];
             break;
+    }
+    if (self.pendingOperations.count == 1 && self.queue.operationCount == 0) {
+        [self schecduleNextOperations];
     }
 }
 
@@ -149,6 +156,37 @@
     for(NSOperation* op in self.operations)
     {
         [op cancel];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if(context == s && [keyPath isEqualToString:@"isFinished"])
+    {
+        [self schecduleNextOperations];
+    }
+}
+
+- (void)schecduleNextOperations
+{
+    @synchronized(self.queue)
+    {
+        NSOperation* op;
+        int currentOperationsInQueue = self.queue.operationCount;
+        while (currentOperationsInQueue < self.maxConcurrentOperations) {
+            op = [self getNextOperation];
+            if(op != nil)
+            {
+                [self.queue addOperation:op];
+                currentOperationsInQueue++;
+            }
+            else {
+                break;
+            }
+        }
     }
 }
 
